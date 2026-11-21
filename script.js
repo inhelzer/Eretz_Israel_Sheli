@@ -14,3 +14,19 @@ document.querySelectorAll('.hotspot').forEach(button => button.addEventListener(
 dialog.querySelector('.close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 dialog.addEventListener('close', () => { document.body.classList.remove('modal-open'); lastOpener?.focus(); });
+
+const buildingPage = document.querySelector('#building-page');
+const buildingCounter = document.querySelector('#building-counter');
+const buildingPrev = document.querySelector('#building-prev');
+const buildingNext = document.querySelector('#building-next');
+let buildingIndex = 1;
+function renderBuildingPage() {
+  buildingPage.src = `assets/building-pages/page-${String(buildingIndex).padStart(2, '0')}.jpg`;
+  buildingPage.alt = `עבודות התלמידים, עמוד ${buildingIndex} מתוך 22`;
+  buildingCounter.textContent = `${buildingIndex} / 22`;
+  buildingPrev.disabled = buildingIndex === 1;
+  buildingNext.disabled = buildingIndex === 22;
+}
+buildingPrev.addEventListener('click', () => { if (buildingIndex > 1) { buildingIndex--; renderBuildingPage(); } });
+buildingNext.addEventListener('click', () => { if (buildingIndex < 22) { buildingIndex++; renderBuildingPage(); } });
+renderBuildingPage();
