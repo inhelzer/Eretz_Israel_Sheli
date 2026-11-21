@@ -23,4 +23,4 @@ body{font-family:Assistant,Arial,sans-serif}
 @media(max-width:700px){.intro-visual img{max-height:420px;margin:auto}.building-gallery{grid-template-columns:1fr;gap:28px}.reference-frame,.student-frame{height:480px;max-width:350px;margin:auto}.student-gallery>a{margin-top:8px}}
 .site-banner{background:#79b4aa;position:relative;isolation:isolate}.site-banner::before{content:"";position:absolute;inset:0;background:url('assets/paper-grain.svg') repeat;opacity:.055;mix-blend-mode:multiply;pointer-events:none;z-index:-1}
 
-body,.image-wrap{background:#f9f0d9}
+body{background:#fff}.image-wrap{background:#f9f0d9}
