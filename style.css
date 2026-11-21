@@ -35,3 +35,4 @@ body{background:#fff}.image-wrap{background:#f9f0d9}
 .reference-frame.amnon,.reference-frame.buildem{aspect-ratio:auto;overflow:visible}.reference-frame.amnon img,.reference-frame.buildem img{position:static;display:block;width:100%;height:auto}
 
 .site-footer{max-width:1380px;margin:0 auto;padding:30px 24px 75px;text-align:center}.site-footer a{color:#3977d8;text-decoration:underline;font-size:1rem}
+.site-footer{text-align:left;padding:24px 24px 32px}.site-footer a{display:inline-block;border:1px solid #4a4a4a;border-radius:3px;padding:8px 20px;background:#fff;color:#222;text-decoration:none;font-size:1rem;line-height:1.25}.site-footer a:hover,.site-footer a:focus-visible{background:#f4f4f4}
