@@ -31,3 +31,5 @@ body{background:#fff}.image-wrap{background:#f9f0d9}
 
 .image-wrap .caption{position:absolute;top:1.5%;left:1.2%;z-index:2;padding:0;pointer-events:none;text-align:left}
 @media(max-width:600px){.image-wrap .caption{top:1%;left:1.5%;font-size:.7rem;max-width:38%}}
+
+.reference-frame.amnon,.reference-frame.buildem{aspect-ratio:auto;overflow:visible}.reference-frame.amnon img,.reference-frame.buildem img{position:static;display:block;width:100%;height:auto}
