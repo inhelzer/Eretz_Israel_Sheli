@@ -36,3 +36,5 @@ body{background:#fff}.image-wrap{background:#f9f0d9}
 
 .site-footer{max-width:1380px;margin:0 auto;padding:30px 24px 75px;text-align:center}.site-footer a{color:#3977d8;text-decoration:underline;font-size:1rem}
 .site-footer{text-align:left;padding:24px 24px 32px}.site-footer a{display:inline-block;border:1px solid #4a4a4a;border-radius:3px;padding:8px 20px;background:#fff;color:#222;text-decoration:none;font-size:1rem;line-height:1.25}.site-footer a:hover,.site-footer a:focus-visible{background:#f4f4f4}
+@font-face{font-family:'Reisinger Yonatan';src:url('assets/reisinger-yonatan.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+.site-banner h1{font-family:'Reisinger Yonatan',serif;font-weight:400}
