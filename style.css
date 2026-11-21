@@ -26,3 +26,5 @@ body{font-family:Assistant,Arial,sans-serif}
 body{background:#fff}.image-wrap{background:#f9f0d9}
 /* Preserve the complete image areas selected in the reference slide. */
 .building-gallery{align-items:start}.reference-frame{height:auto;max-width:none}.reference-frame.amnon{aspect-ratio:1068 / 1393}.reference-frame.buildem{aspect-ratio:583 / 786}.reference-frame.amnon img{width:100%;height:auto;top:-47%;left:0}.reference-frame.buildem img{width:115.56%;height:auto;top:-3.7%;left:-12.32%}.student-frame{height:auto;overflow:visible}.student-frame img{width:100%;height:auto;object-fit:contain}.building-gallery figcaption{font-size:1rem;line-height:1.55;margin-top:14px;text-align:right}.student-gallery>a{margin-top:8px}@media(max-width:700px){.reference-frame,.student-frame{height:auto;max-width:350px}}
+
+.caption{color:#fe3705;font-size:1rem}
