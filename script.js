@@ -6,9 +6,10 @@ document.querySelectorAll('.hotspot').forEach(button => button.addEventListener(
   processImage.src = `assets/${button.dataset.image}`;
   processImage.alt = `תיעוד תהליך העבודה: ${button.dataset.name}`;
   dialog.setAttribute('aria-label', `תהליך העבודה: ${button.dataset.name}`);
-  dialog.scrollTop = 0;
   dialog.showModal();
   document.body.classList.add('modal-open');
+  dialog.scrollTo({ top: 0, behavior: 'instant' });
+  requestAnimationFrame(() => dialog.scrollTo({ top: 0, behavior: 'instant' }));
 }));
 dialog.querySelector('.close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
