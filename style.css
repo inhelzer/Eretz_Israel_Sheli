@@ -33,3 +33,5 @@ body{background:#fff}.image-wrap{background:#f9f0d9}
 @media(max-width:600px){.image-wrap .caption{top:1%;left:1.5%;font-size:.7rem;max-width:38%}}
 
 .reference-frame.amnon,.reference-frame.buildem{aspect-ratio:auto;overflow:visible}.reference-frame.amnon img,.reference-frame.buildem img{position:static;display:block;width:100%;height:auto}
+
+.site-footer{max-width:1380px;margin:0 auto;padding:30px 24px 75px;text-align:center}.site-footer a{color:#3977d8;text-decoration:underline;font-size:1rem}
