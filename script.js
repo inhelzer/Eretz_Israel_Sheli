@@ -30,3 +30,28 @@ function renderBuildingPage() {
 buildingPrev.addEventListener('click', () => { if (buildingIndex > 1) { buildingIndex--; renderBuildingPage(); } });
 buildingNext.addEventListener('click', () => { if (buildingIndex < 22) { buildingIndex++; renderBuildingPage(); } });
 renderBuildingPage();
+
+const researchButtons = document.querySelectorAll('.research-game');
+const researchImage = document.querySelector('#research-page');
+const researchCounter = document.querySelector('#research-counter');
+const researchPrevious = document.querySelector('#research-prev');
+const researchNext = document.querySelector('#research-next');
+const researchPdf = document.querySelector('#research-pdf');
+let researchGame = '3', researchTotal = 6, researchPage = 1, researchName = 'מלחמתינו';
+function renderResearchPage() {
+  researchImage.src = `assets/research/game-${researchGame}/page-${researchPage}.jpg`;
+  researchImage.alt = `מחקר המשחק ${researchName}, עמוד ${researchPage} מתוך ${researchTotal}`;
+  researchCounter.textContent = `${researchPage} / ${researchTotal}`;
+  researchPdf.href = `assets/research/game-${researchGame}/document.pdf`;
+  researchPrevious.disabled = researchPage === 1;
+  researchNext.disabled = researchPage === researchTotal;
+}
+researchButtons.forEach(button => button.addEventListener('click', () => {
+  researchButtons.forEach(item => { item.classList.remove('selected'); item.setAttribute('aria-pressed', 'false'); });
+  button.classList.add('selected'); button.setAttribute('aria-pressed', 'true');
+  researchGame = button.dataset.game; researchTotal = Number(button.dataset.pages); researchName = button.textContent.trim(); researchPage = 1;
+  renderResearchPage();
+}));
+researchPrevious.addEventListener('click', () => { if (researchPage > 1) { researchPage--; renderResearchPage(); } });
+researchNext.addEventListener('click', () => { if (researchPage < researchTotal) { researchPage++; renderResearchPage(); } });
+renderResearchPage();
