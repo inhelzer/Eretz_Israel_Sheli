@@ -36,7 +36,6 @@ const researchImage = document.querySelector('#research-page');
 const researchCounter = document.querySelector('#research-counter');
 const researchPrevious = document.querySelector('#research-prev');
 const researchNext = document.querySelector('#research-next');
-const researchPdf = document.querySelector('#research-pdf');
 let researchGame = '3', researchTotal = 7, researchPage = 1, researchName = 'מלחמתינו';
 function renderResearchPage() {
   researchImage.src = researchPage === 1
@@ -44,7 +43,6 @@ function renderResearchPage() {
     : `assets/research/game-${researchGame}/page-${researchPage - 1}.jpg`;
   researchImage.alt = `מחקר המשחק ${researchName}, עמוד ${researchPage} מתוך ${researchTotal}`;
   researchCounter.textContent = `${researchPage} / ${researchTotal}`;
-  researchPdf.href = `assets/research/game-${researchGame}/document.pdf`;
   researchPrevious.disabled = researchPage === 1;
   researchNext.disabled = researchPage === researchTotal;
 }
