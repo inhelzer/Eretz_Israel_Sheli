@@ -37,9 +37,11 @@ const researchCounter = document.querySelector('#research-counter');
 const researchPrevious = document.querySelector('#research-prev');
 const researchNext = document.querySelector('#research-next');
 const researchPdf = document.querySelector('#research-pdf');
-let researchGame = '3', researchTotal = 6, researchPage = 1, researchName = 'מלחמתינו';
+let researchGame = '3', researchTotal = 7, researchPage = 1, researchName = 'מלחמתינו';
 function renderResearchPage() {
-  researchImage.src = `assets/research/game-${researchGame}/page-${researchPage}.jpg`;
+  researchImage.src = researchPage === 1
+    ? `assets/research/game-${researchGame}/cover.jpg`
+    : `assets/research/game-${researchGame}/page-${researchPage - 1}.jpg`;
   researchImage.alt = `מחקר המשחק ${researchName}, עמוד ${researchPage} מתוך ${researchTotal}`;
   researchCounter.textContent = `${researchPage} / ${researchTotal}`;
   researchPdf.href = `assets/research/game-${researchGame}/document.pdf`;
@@ -49,7 +51,7 @@ function renderResearchPage() {
 researchButtons.forEach(button => button.addEventListener('click', () => {
   researchButtons.forEach(item => { item.classList.remove('selected'); item.setAttribute('aria-pressed', 'false'); });
   button.classList.add('selected'); button.setAttribute('aria-pressed', 'true');
-  researchGame = button.dataset.game; researchTotal = Number(button.dataset.pages); researchName = button.textContent.trim(); researchPage = 1;
+  researchGame = button.dataset.game; researchTotal = Number(button.dataset.pages) + 1; researchName = button.textContent.trim(); researchPage = 1;
   renderResearchPage();
 }));
 researchPrevious.addEventListener('click', () => { if (researchPage > 1) { researchPage--; renderResearchPage(); } });
