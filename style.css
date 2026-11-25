@@ -42,3 +42,5 @@ body{background:#fff}.image-wrap{background:#f9f0d9}
 .research-stage{border:1px solid #222}.research-game.selected{border-right-color:transparent;border-bottom-color:transparent;background:transparent;color:var(--red);font-weight:700}.research-game.selected:hover,.research-game.selected:focus-visible{background:transparent}
 
 .research-game{font-family:'Reisinger Yonatan',serif}
+
+.student-frame{border:1px solid #222}
